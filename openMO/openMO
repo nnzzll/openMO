@@ -1,0 +1,14 @@
+#ifndef OPENMO_H
+#define OPENMO_H
+#include <openMO/bracket>
+
+namespace mo
+{
+std::ostream& operator<<(std::ostream& stream, const BracketResult& res)
+{
+  res << stream;
+  return stream;
+}
+}  // namespace mo
+
+#endif

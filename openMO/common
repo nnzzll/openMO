@@ -1,0 +1,16 @@
+#ifndef OPENMO_COMMON_H
+#define OPENMO_COMMON_H
+
+namespace mo
+{
+enum Status
+{
+  TooManyFunctionCalls = -3,
+  TooManyIterations = -2,
+  NotStarted = -1,
+  Running = 0,
+  Converged = 1
+};
+}  // namespace mo
+
+#endif
