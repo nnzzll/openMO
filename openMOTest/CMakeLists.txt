@@ -5,3 +5,8 @@ add_executable(testBracket ${CMAKE_CURRENT_SOURCE_DIR}/testBracket.cxx)
 target_link_libraries(testBracket
     Eigen3::Eigen
 )
+
+add_executable(testBrent ${CMAKE_CURRENT_SOURCE_DIR}/testBrent.cxx)
+target_link_libraries(testBrent
+    Eigen3::Eigen
+)

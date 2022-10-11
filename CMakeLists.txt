@@ -15,6 +15,7 @@ endif()
 set(${PROJECT_NAME}_FILES 
     ${PROJECT_NAME}/common
     ${PROJECT_NAME}/bracket
+    ${PROJECT_NAME}/brent
     ${PROJECT_NAME}/openMO
 )
 

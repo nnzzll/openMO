@@ -1,10 +1,17 @@
 #ifndef OPENMO_H
 #define OPENMO_H
 #include <openMO/bracket>
+#include <openMO/brent>
 
 namespace mo
 {
 std::ostream& operator<<(std::ostream& stream, const BracketResult& res)
+{
+  res << stream;
+  return stream;
+}
+
+std::ostream& operator<<(std::ostream& stream, const BrentResult& res)
 {
   res << stream;
   return stream;
