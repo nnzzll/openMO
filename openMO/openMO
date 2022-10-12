@@ -2,6 +2,7 @@
 #define OPENMO_H
 #include <openMO/bracket>
 #include <openMO/brent>
+#include <openMO/powell>
 
 namespace mo
 {
@@ -16,6 +17,13 @@ std::ostream& operator<<(std::ostream& stream, const BrentResult& res)
   res << stream;
   return stream;
 }
+
+std::ostream& operator<<(std::ostream& stream, const PowellResult& res)
+{
+  res << stream;
+  return stream;
+}
+
 }  // namespace mo
 
 #endif

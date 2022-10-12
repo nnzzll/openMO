@@ -17,6 +17,7 @@ set(${PROJECT_NAME}_FILES
     ${PROJECT_NAME}/bracket
     ${PROJECT_NAME}/brent
     ${PROJECT_NAME}/openMO
+    ${PROJECT_NAME}/powell
 )
 
 add_library(${PROJECT_NAME} SHARED
