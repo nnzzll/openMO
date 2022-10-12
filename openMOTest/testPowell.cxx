@@ -2,10 +2,9 @@
 #include <openMO/openMO>
 #include <Eigen/Core>
 
-struct Functor
+struct Functor : mo::BaseFunc
 {
-  int fcalls = 0;
-  double operator()(Eigen::VectorXd& x)
+  double operator()(Eigen::VectorXd& x) override
   {
     fcalls++;
     return 100 * (x(1) - x(0) * x(0)) * (x(1) - x(0) * x(0)) + (1 - x(0)) * (1 - x(0));

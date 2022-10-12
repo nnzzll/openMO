@@ -1,10 +1,12 @@
 #include <iostream>
 #include <openMO/openMO>
+#include <Eigen/Core>
 
-struct Functor
+struct Functor : mo::BaseFunc
 {
-  double operator()(double x)
+  double operator()(double x) override
   {
+    fcalls++;
     return sin(x);
   }
 };

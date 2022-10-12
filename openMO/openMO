@@ -4,8 +4,17 @@
 #include <openMO/brent>
 #include <openMO/powell>
 
+#include <Eigen/Core>
 namespace mo
 {
+
+struct BaseFunc
+{
+  int fcalls = 0;
+  virtual double operator()(double x){};
+  virtual double operator()(Eigen::VectorXd& x){};
+};
+
 std::ostream& operator<<(std::ostream& stream, const BracketResult& res)
 {
   res << stream;
