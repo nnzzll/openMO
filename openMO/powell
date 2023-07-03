@@ -102,6 +102,11 @@ class Powell
   double linesearch_powell(FuncType& func, Eigen::VectorXd& x, Eigen::VectorXd& d,
                            double tol = 1e-3)
   {
+    if (!d.any())
+    {
+      return 0.0;
+    }
+
     PowellFunctor<FuncType> wrapFunc(func, x, d);
     if (isBounded)
     {
